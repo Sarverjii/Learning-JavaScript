@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60vw;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 100px;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 4vw;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 3vw;
+    margin: 20px;
+}
+
+p {
+    font-size: 3vw;
+    margin: 20px;
+}
+
+#bg {
+    background-image: url("Laptop_bg.jpg");
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+button {
+    width: 50%;
+    height: 50px;
+    background-color: burlywood;
+    border: none;
+    margin-bottom: 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #deb887d0;
+}
+
+/* Mobile & Tablet Responsive Styles */
+@media (max-width: 768px) {
+    #bg {
+        background-image: url("Mobile_bg.jpg");
+    }
+
+    #content {
+        max-width: 90vw;
+        padding: 40px 20px;
+    }
+
+    h1, h2, p {
+        font-size: 6vw;
+    }
+
+    button {
+        width: 80%;
+        font-size: 5vw;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, p {
+        font-size: 7vw;
+    }
+
+    button {
+        font-size: 6vw;
+    }
+}

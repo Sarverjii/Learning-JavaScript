@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>People Counter App</title>
+</head>
+<body>
+   <div id="bg"></div>
+   <div id="content">
+    <h1>People Counter App</h1>
+    <h2>People Entered</h2>
+    <p id="score">0</p>
+    <p id="previousEntries">Previous Entries : </p>
+    <button onclick = "increaseCounter()">Increase Counter</button>
+    <button onclick="decreaseCounter()">Decrease Counter</button>
+    <button onclick="Reset()">Reset</button>
+    <button onclick="save()">Save</button>
+   </div>
+
+   <script>
+     score = document.getElementById("score");
+     entries = document.getElementById("previousEntries")
+     currentScore = 0
+
+    function increaseCounter(){
+        score.innerText = ++currentScore;
+     }
+    function decreaseCounter(){
+        if(currentScore>0)
+            score.innerText = --currentScore;
+     }
+    function Reset(){
+        score.innerText = 0;
+        currentScore=0
+        entries.innerText = "Previous Entries : "
+     }
+     function save()
+     {
+        entries.innerText += " " + score.innerText + " - "
+        score.innerText = 0;
+        currentScore=0
+     }
+    
+   </script>
+</body>
+</html>
